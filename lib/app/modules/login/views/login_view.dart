@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
 import 'package:get/get.dart';
 
 import '../controllers/login_controller.dart';
@@ -43,6 +42,7 @@ class LoginView extends GetView<LoginController> {
                   'Welcome to',
                   style: TextStyle(
                     fontSize: 25,
+                    color: Color(0xFF22215B),
                   ),
                 ),
                 Text(
@@ -50,6 +50,7 @@ class LoginView extends GetView<LoginController> {
                   style: TextStyle(
                     fontSize: 40,
                     fontWeight: FontWeight.bold,
+                    color: Color(0xFF22215B),
                   ),
                 ),
                 SizedBox(
@@ -61,6 +62,7 @@ class LoginView extends GetView<LoginController> {
                     'Best cloud storage platform for all business and individuals to manage there data\n\nJoin For Free.',
                     style: TextStyle(
                       fontSize: 16,
+                      color: Color(0xFF7B7F9E),
                     ),
                   ),
                 ),
@@ -130,7 +132,12 @@ class LoginView extends GetView<LoginController> {
                   height: 35,
                 ),
                 Center(
-                  child: Text('Use Social Login'),
+                  child: Text(
+                    'Use Social Login',
+                    style: TextStyle(
+                      color: Color(0xFF1B1D28),
+                    ),
+                  ),
                 ),
                 SizedBox(
                   height: 20,
@@ -153,7 +160,13 @@ class LoginView extends GetView<LoginController> {
                   height: 40,
                 ),
                 Center(
-                  child: Text('Create an account'),
+                  child: Text(
+                    'Create an account',
+                    style: TextStyle(
+                      color: Color(0xFF1B1D28),
+                      fontSize: 17,
+                    ),
+                  ),
                 ),
               ],
             ),
