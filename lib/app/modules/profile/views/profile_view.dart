@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
 import '../controllers/profile_controller.dart';
+import 'folder_card_widget.dart';
 
 class ProfileView extends GetView<ProfileController> {
   const ProfileView({super.key});
@@ -55,11 +56,13 @@ class ProfileView extends GetView<ProfileController> {
                 Column(
                   children: [
                     SizedBox(
-                      width: 75,
-                      height: 75,
-                      child: SvgPicture.asset(
-                        'assets/images/profile.svg',
-                        fit: BoxFit.cover,
+                      width: 80,
+                      height: 80,
+                      child: ClipOval(
+                        child: Image.asset(
+                          'assets/images/profile.png',
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
                     SizedBox(
@@ -87,7 +90,7 @@ class ProfileView extends GetView<ProfileController> {
                       height: 7,
                     ),
                     Text(
-                      'Computer Science graduate skilled in Flutter development, network support, and creating user-focused solutions.',
+                      'Computer Science graduate skilled in Flutter development and network support.',
                       style: TextStyle(
                         color: Colors.white.withOpacity(0.6),
                         fontSize: 15,
@@ -157,13 +160,13 @@ class ProfileView extends GetView<ProfileController> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                CardFolder(
+                CardFolderWidget(
                   title: 'Mobile Apps',
                   date: 'December 20.2020',
                   color: Color(0xFF415EB6),
                   svgPicture: SvgPicture.asset('assets/icons/folder_blue.svg'),
                 ),
-                CardFolder(
+                CardFolderWidget(
                   title: 'SVG Icons',
                   date: 'December 14.2020',
                   color: Color(0xFFFFB110),
@@ -181,13 +184,13 @@ class ProfileView extends GetView<ProfileController> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                CardFolder(
+                CardFolderWidget(
                   title: 'Prototypes',
                   date: 'Novemaber 22.2020',
                   color: Color(0xFFAC4141),
                   svgPicture: SvgPicture.asset('assets/icons/folder_red.svg'),
                 ),
-                CardFolder(
+                CardFolderWidget(
                   title: 'Avatars',
                   date: 'Novemaber 10.2020',
                   color: Color(0xFF23B0B0),
@@ -245,62 +248,6 @@ class ProfileView extends GetView<ProfileController> {
               style: TextStyle(
                 color: Color(0xFF22215B).withOpacity(0.6),
               ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class CardFolder extends StatelessWidget {
-  final String title;
-  final String date;
-  final Color color;
-  final SvgPicture svgPicture;
-
-  const CardFolder({
-    super.key,
-    required this.title,
-    required this.date,
-    required this.color,
-    required this.svgPicture,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(15),
-      width: Get.width * 0.4,
-      height: 120,
-      decoration: BoxDecoration(
-        color: color.withOpacity(0.1),
-        borderRadius: BorderRadius.circular(20),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          svgPicture,
-          SizedBox(
-            height: 15,
-          ),
-          Text(
-            title,
-            style: TextStyle(
-              color: color,
-              fontSize: 16,
-              fontWeight: FontWeight.w600,
-            ),
-          ),
-          SizedBox(
-            height: 5,
-          ),
-          Text(
-            date,
-            style: TextStyle(
-              color: color,
-              fontSize: 12,
             ),
           ),
         ],

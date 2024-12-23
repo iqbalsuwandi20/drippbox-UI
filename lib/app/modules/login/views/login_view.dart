@@ -31,7 +31,7 @@ class LoginView extends GetView<LoginController> {
                   width: 200,
                   height: 200,
                   child: SvgPicture.asset(
-                    'assets/images/pic-1.svg',
+                    'assets/images/icon.svg',
                     fit: BoxFit.contain,
                   ),
                 ),
