@@ -7,7 +7,7 @@ void main() {
   runApp(
     GetMaterialApp(
       title: "Application",
-      initialRoute: Routes.profile,
+      initialRoute: Routes.login,
       getPages: AppPages.routes,
       debugShowCheckedModeBanner: false,
     ),

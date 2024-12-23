@@ -21,7 +21,9 @@ class ProfileView extends GetView<ProfileController> {
         ),
         centerTitle: true,
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Get.back();
+          },
           icon: Icon(
             Icons.arrow_back_ios,
             color: Color(0xFF22215B),
